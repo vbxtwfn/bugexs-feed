@@ -1,0 +1,45 @@
+name: Generate JSON Feeds
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+  push:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 -q
+
+      - name: Generate feeds
+        run: |
+          mkdir -p feeds
+          python3 bugexs_feed.py -t lastupdate -o feeds/lastupdate.json
+          python3 bugexs_feed.py -t monthvote -o feeds/monthvote.json
+          python3 bugexs_feed.py -t home -o feeds/home.json
+          python3 bugexs_feed.py -t dayvisit -o feeds/dayvisit.json
+          python3 bugexs_feed.py -t weekvote -o feeds/weekvote.json
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+        
+  git config --local user.name "GitHub Action"
+          git add feeds/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update feeds $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
