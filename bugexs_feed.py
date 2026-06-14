@@ -53,47 +53,47 @@ def get_session() -> requests.Session:
 
 
 def fetch(url: str, max_retries: int = 4, base_delay: float = 2.0) -> str:
-    """
-    使用带重试的 requests 拉取页面
-    - 随机选择 User-Agent
-    - 失败后指数退避 + 抖动
-    - 维持 Session 复用连接
-    """
+    """带详细调试的 fetch 函数"""
+    import traceback
     session = get_session()
-    last_err = None
 
     for attempt in range(max_retries):
         ua = random.choice(USER_AGENTS)
-        headers = {
+        req_headers = {
             "User-Agent": ua,
             "Referer": BASE_URL + "/",
         }
+        print(f"  [DEBUG] Try {attempt+1}/{max_retries}: {url}", file=sys.stderr)
+        print(f"  [DEBUG] UA: {ua[:70]}", file=sys.stderr)
 
         try:
-            resp = session.get(url, headers=headers, timeout=25)
+            resp = session.get(url, headers=req_headers, timeout=25)
+            print(f"  [DEBUG] Status: {resp.status_code}, Size: {len(resp.text)}", file=sys.stderr)
             resp.raise_for_status()
-
-            # 检测反爬页面
             content = resp.text
+
             if len(content) < 200:
-                raise ValueError(f"Response too short ({len(content)} bytes), likely blocked page")
+                print(f"  [DEBUG] Too short, likely blocked", file=sys.stderr)
+                raise ValueError(f"Too short: {len(content)} bytes")
 
-            # 检查是否返回了反爬提示
-            if any(kw in content for kw in ["访问过于频繁", "请稍后再试", "验证码", "captcha", "blocked", "Forbidden"]):
-                raise ValueError("Anti-bot page detected")
+            if any(kw in content for kw in ["访问过于频繁","请稍后再试","验证码","captcha","blocked","Forbidden"]):
+                print(f"  [DEBUG] Anti-bot detected in content", file=sys.stderr)
+                raise ValueError("Anti-bot page")
 
+            print(f"  [DEBUG] SUCCESS, got {len(content)} bytes", file=sys.stderr)
             return content
 
         except Exception as e:
-            last_err = e
+            print(f"  [DEBUG] Error: {type(e).__name__}: {e}", file=sys.stderr)
             if attempt < max_retries - 1:
                 delay = base_delay * (2 ** attempt) + random.uniform(0.5, 2.0)
-                print(f"  ⚠️ 抓取失败(尝试 {attempt+1}/{max_retries}): {e}，{delay:.1f}s 后重试...", file=sys.stderr)
+                print(f"  [DEBUG] Retrying in {delay:.1f}s...", file=sys.stderr)
                 time.sleep(delay)
             else:
-                print(f"  ❌ 抓取彻底失败: {e}", file=sys.stderr)
+                traceback.print_exc(file=sys.stderr)
+                print(f"  [DEBUG] All retries exhausted", file=sys.stderr)
 
-    # 所有重试都失败，返回空，让上层知道
+    print(f"  [DEBUG] Returning empty string", file=sys.stderr)
     return ""
 
 
