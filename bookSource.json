@@ -1,16 +1,14 @@
 {
   "bookSourceComment": "不格小说网 | GitHub Actions 自动更新",
-  "bookSourceGroup": "小说📚",
+  "bookSourceGroup": "小说",
   "bookSourceName": "不格小说网",
   "bookSourceType": 0,
   "bookSourceUrl": "https://m.bugexs.com",
   "customOrder": 0,
   "enabled": true,
   "enabledCookieJar": false,
-  "header": {
-    "User-Agent": "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36"
-  },
-  "lastUpdateTime": 1781461760459,
+  "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36\"}",
+  "lastUpdateTime": 1781462181949,
   "loginCheckTime": 0,
   "respondTime": 18000,
   "ruleBookInfo": {
@@ -19,23 +17,23 @@
     "intro": "$.intro",
     "kind": null,
     "name": "$.title",
-    "tocUrl": null
+    "tocUrl": "$.url"
   },
   "ruleContent": {
-    "content": "js:\nvar content = result.match(/id=\"content\"[^>]*>([\\s\\S]*?)<\\/div>/i);\ncontent ? content[1].replace(/<[^>]+>/g,'').replace(/\\s{2,}/g,'\\n').trim() : '';"
+    "content": "@css:#content"
   },
   "ruleSearch": {
     "author": "$.author",
-    "bookList": "$.books",
+    "bookList": "$.data.list",
     "bookUrl": "$.url",
     "coverUrl": "$.cover",
     "intro": "$.intro",
     "name": "$.title"
   },
   "ruleToc": {
-    "chapterList": "js:\nvar urls = [];\nvar id = result.match(/\\/article\\/(\\d+)\\.html/);\nif (id) {\n    var num = parseInt(id[1]);\n    for (var i = 1; i <= 1000; i++) {\n        urls.push({\"title\": \"第\" + i + \"章\", \"url\": \"https://m.bugexs.com/chapter/\" + num + \"_\" + i + \".html\"});\n    }\n}\nJSON.stringify(urls);",
-    "chapterName": "$.title",
-    "chapterUrl": "$.url"
+    "chapterList": "@css:.chapterlist a",
+    "chapterName": "text",
+    "chapterUrl": "href"
   },
-  "searchUrl": "https://vbxtwfn.github.io/bugexs-feed/search.json?keyword={{key}}"
+  "searchUrl": "https://vbxtwfn.github.io/bugexs-feed/search.json"
 }
