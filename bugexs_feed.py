@@ -14,25 +14,87 @@ import json
 import re
 import sys
 import argparse
-import subprocess
+import time
+import random
+import requests
+import bs4
 from datetime import datetime
 from urllib.parse import urljoin
 
 
 BASE_URL = "https://m.bugexs.com"
 
+# 多套 User-Agent，模拟不同浏览器/设备
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+    "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+]
 
-def fetch(url: str) -> str:
-    """使用 curl 拉取页面"""
-    result = subprocess.run(
-        ["curl", "-s", "-L",
-         "--user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-         "--header", "Accept-Language: zh-CN,zh;q=0.9",
-         "--connect-timeout", "10", "--max-time", "20",
-         url],
-        capture_output=True, text=True, timeout=25
-    )
-    return result.stdout
+# 全局 Session，维持 TCP 复用和 Cookie
+_session = None
+
+def get_session() -> requests.Session:
+    global _session
+    if _session is None:
+        _session = requests.Session()
+        _session.headers.update({
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Connection": "keep-alive",
+            "Upgrade-Insecure-Requests": "1",
+        })
+    return _session
+
+
+def fetch(url: str, max_retries: int = 4, base_delay: float = 2.0) -> str:
+    """带详细调试的 fetch 函数"""
+    import traceback
+    session = get_session()
+
+    for attempt in range(max_retries):
+        ua = random.choice(USER_AGENTS)
+        req_headers = {
+            "User-Agent": ua,
+            "Referer": BASE_URL + "/",
+        }
+        print(f"  [DEBUG] Try {attempt+1}/{max_retries}: {url}", file=sys.stderr)
+        print(f"  [DEBUG] UA: {ua[:70]}", file=sys.stderr)
+
+        try:
+            resp = session.get(url, headers=req_headers, timeout=25)
+            print(f"  [DEBUG] Status: {resp.status_code}, Size: {len(resp.text)}", file=sys.stderr)
+            resp.raise_for_status()
+            content = resp.text
+
+            if len(content) < 200:
+                print(f"  [DEBUG] Too short, likely blocked", file=sys.stderr)
+                raise ValueError(f"Too short: {len(content)} bytes")
+
+            if any(kw in content for kw in ["访问过于频繁","请稍后再试","验证码","captcha","blocked","Forbidden"]):
+                print(f"  [DEBUG] Anti-bot detected in content", file=sys.stderr)
+                raise ValueError("Anti-bot page")
+
+            print(f"  [DEBUG] SUCCESS, got {len(content)} bytes", file=sys.stderr)
+            return content
+
+        except Exception as e:
+            print(f"  [DEBUG] Error: {type(e).__name__}: {e}", file=sys.stderr)
+            if attempt < max_retries - 1:
+                delay = base_delay * (2 ** attempt) + random.uniform(0.5, 2.0)
+                print(f"  [DEBUG] Retrying in {delay:.1f}s...", file=sys.stderr)
+                time.sleep(delay)
+            else:
+                traceback.print_exc(file=sys.stderr)
+                print(f"  [DEBUG] All retries exhausted", file=sys.stderr)
+
+    print(f"  [DEBUG] Returning empty string", file=sys.stderr)
+    return ""
 
 
 def find_real_gt(s: str, start: int, end: int) -> int:
@@ -214,11 +276,22 @@ def generate_feed(feed_type: str = "lastupdate", page: int = 1) -> dict:
     print(f"📡 抓取: {url}", file=sys.stderr)
     html = fetch(url)
 
-    # 解析不同结构
-    if feed_type == "home":
-        items = parse_slide(html) + parse_vlist(html)
+    # DEBUG: save raw HTML to feeds/__debug.html for inspection
+    if html:
+        os.makedirs("feeds", exist_ok=True)
+        with open("feeds/__debug.html", "w", encoding="utf-8") as f:
+            f.write(html[:5000])
+        print(f"  [DEBUG] Saved first 5000 chars of raw HTML to feeds/__debug.html", file=sys.stderr)
+
+    if not html:
+        print(f"⚠️  获取页面内容为空，跳过解析", file=sys.stderr)
+        items = []
     else:
-        items = parse_cover_cards(html)
+        # 解析不同结构
+        if feed_type == "home":
+            items = parse_slide(html) + parse_vlist(html)
+        else:
+            items = parse_cover_cards(html)
 
     # 去重（按 url）
     seen = set()
