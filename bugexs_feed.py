@@ -276,6 +276,13 @@ def generate_feed(feed_type: str = "lastupdate", page: int = 1) -> dict:
     print(f"📡 抓取: {url}", file=sys.stderr)
     html = fetch(url)
 
+    # DEBUG: save raw HTML to feeds/__debug.html for inspection
+    if html:
+        os.makedirs("feeds", exist_ok=True)
+        with open("feeds/__debug.html", "w", encoding="utf-8") as f:
+            f.write(html[:5000])
+        print(f"  [DEBUG] Saved first 5000 chars of raw HTML to feeds/__debug.html", file=sys.stderr)
+
     if not html:
         print(f"⚠️  获取页面内容为空，跳过解析", file=sys.stderr)
         items = []
