@@ -8,7 +8,7 @@
   "enabled": true,
   "enabledCookieJar": false,
   "header": {},
-  "lastUpdateTime": 1781462369994,
+  "lastUpdateTime": 1781462602423,
   "loginCheckTime": 0,
   "respondTime": 18000,
   "ruleBookInfo": {
@@ -24,7 +24,7 @@
   },
   "ruleSearch": {
     "author": "author",
-    "bookList": "",
+    "bookList": "$",
     "bookUrl": "url",
     "coverUrl": "cover",
     "intro": "intro",
