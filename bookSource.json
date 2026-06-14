@@ -4,21 +4,25 @@
   "bookSourceName": "不格小说网",
   "bookSourceType": 0,
   "bookSourceUrl": "https://m.bugexs.com",
+  "customOrder": 0,
   "enabled": true,
+  "header": {},
+  "lastUpdateTime": 1781462935380,
+  "respondTime": 18000,
   "ruleBookInfo": {
-    "author": "author",
-    "coverUrl": "cover",
-    "name": "title",
-    "tocUrl": "url"
+    "author": "$.author",
+    "coverUrl": "$.cover",
+    "name": "$.title",
+    "tocUrl": "$.url"
   },
   "ruleContent": {},
   "ruleSearch": {
-    "author": "author",
-    "bookList": "$.books",
-    "bookUrl": "url",
-    "coverUrl": "cover",
-    "name": "title"
+    "author": "$.author",
+    "bookList": "@",
+    "bookUrl": "$.url",
+    "coverUrl": "$.cover",
+    "name": "$.title"
   },
   "ruleToc": {},
-  "searchUrl": "https://vbxtwfn.github.io/bugexs-feed/search.json?ts=1781462865"
+  "searchUrl": "https://vbxtwfn.github.io/bugexs-feed/search.json?ts=1781462935"
 }
