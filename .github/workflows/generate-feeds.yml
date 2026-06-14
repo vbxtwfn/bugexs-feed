@@ -31,14 +31,9 @@ jobs:
           python3 bugexs_feed.py -t dayvisit -o feeds/dayvisit.json
           python3 bugexs_feed.py -t weekvote -o feeds/weekvote.json
 
-      - name: Commit and push
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add feeds/
-          if git diff --staged --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Update feeds $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git push
-          fi
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./feeds
+          publish_branch: gh-pages
