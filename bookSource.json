@@ -1,5 +1,5 @@
 {
-  "bookSourceComment": "不格小说网 | GitHub Actions 自动更新",
+  "bookSourceComment": "不格小说网",
   "bookSourceGroup": "小说",
   "bookSourceName": "不格小说网",
   "bookSourceType": 0,
@@ -7,33 +7,33 @@
   "customOrder": 0,
   "enabled": true,
   "enabledCookieJar": false,
-  "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36\"}",
-  "lastUpdateTime": 1781462181949,
+  "header": {},
+  "lastUpdateTime": 1781462369994,
   "loginCheckTime": 0,
   "respondTime": 18000,
   "ruleBookInfo": {
-    "author": "$.author",
-    "coverUrl": "$.cover",
-    "intro": "$.intro",
-    "kind": null,
-    "name": "$.title",
-    "tocUrl": "$.url"
+    "author": "author",
+    "coverUrl": "cover",
+    "intro": "intro",
+    "kind": "",
+    "name": "title",
+    "tocUrl": "url"
   },
   "ruleContent": {
-    "content": "@css:#content"
+    "content": ""
   },
   "ruleSearch": {
-    "author": "$.author",
-    "bookList": "$.data.list",
-    "bookUrl": "$.url",
-    "coverUrl": "$.cover",
-    "intro": "$.intro",
-    "name": "$.title"
+    "author": "author",
+    "bookList": "",
+    "bookUrl": "url",
+    "coverUrl": "cover",
+    "intro": "intro",
+    "name": "title"
   },
   "ruleToc": {
-    "chapterList": "@css:.chapterlist a",
-    "chapterName": "text",
-    "chapterUrl": "href"
+    "chapterList": "",
+    "chapterName": "",
+    "chapterUrl": ""
   },
   "searchUrl": "https://vbxtwfn.github.io/bugexs-feed/search.json"
 }
