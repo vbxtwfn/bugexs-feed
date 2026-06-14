@@ -14,7 +14,8 @@ import json
 import re
 import sys
 import argparse
-import subprocess
+import requests
+import bs4
 from datetime import datetime
 from urllib.parse import urljoin
 
@@ -23,16 +24,18 @@ BASE_URL = "https://m.bugexs.com"
 
 
 def fetch(url: str) -> str:
-    """使用 curl 拉取页面"""
-    result = subprocess.run(
-        ["curl", "-s", "-L",
-         "--user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-         "--header", "Accept-Language: zh-CN,zh;q=0.9",
-         "--connect-timeout", "10", "--max-time", "20",
-         url],
-        capture_output=True, text=True, timeout=25
+    """使用 requests 拉取页面"""
+    resp = requests.get(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+            "Accept-Language": "zh-CN,zh;q=0.9",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        },
+        timeout=20,
     )
-    return result.stdout
+    resp.raise_for_status()
+    return resp.text
 
 
 def find_real_gt(s: str, start: int, end: int) -> int:
