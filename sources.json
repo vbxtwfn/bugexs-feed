@@ -1,0 +1,26 @@
+[
+  {
+    "bookSourceComment": "不格小说网",
+    "bookSourceGroup": "小说",
+    "bookSourceName": "不格小说网",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.bugexs.com",
+    "enabled": true,
+    "ruleBookInfo": {
+      "author": "author",
+      "coverUrl": "cover",
+      "name": "title",
+      "tocUrl": "url"
+    },
+    "ruleContent": {},
+    "ruleSearch": {
+      "author": "author",
+      "bookList": "$.books",
+      "bookUrl": "url",
+      "coverUrl": "cover",
+      "name": "title"
+    },
+    "ruleToc": {},
+    "searchUrl": "https://vbxtwfn.github.io/bugexs-feed/search.json?ts=1781462865"
+  }
+]
