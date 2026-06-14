@@ -21,24 +21,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: false
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install requests beautifulsoup4 -q
-
       - name: Generate feeds
-        run: |
-          mkdir -p feeds
-          python3 bugexs_feed.py -t lastupdate -o feeds/lastupdate.json
-          python3 bugexs_feed.py -t monthvote -o feeds/monthvote.json
-          python3 bugexs_feed.py -t home -o feeds/home.json
-          python3 bugexs_feed.py -t dayvisit -o feeds/dayvisit.json
-          python3 bugexs_feed.py -t weekvote -o feeds/weekvote.json
+        run: python3 fetcher.py
 
       - name: Deploy to gh-pages
-        run: python3 deploy.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: python3 deploy.py
