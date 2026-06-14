@@ -17,7 +17,6 @@ import argparse
 import time
 import random
 import requests
-import bs4
 from datetime import datetime
 from urllib.parse import urljoin
 
