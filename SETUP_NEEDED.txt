@@ -1,0 +1,1 @@
+Step 1: Go to Actions tab and enable the workflow manually\nStep 2: Run the workflow\nStep 3: Enable GitHub Pages in Settings
