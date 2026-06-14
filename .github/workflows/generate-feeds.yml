@@ -31,9 +31,12 @@ jobs:
           python3 bugexs_feed.py -t dayvisit -o feeds/dayvisit.json
           python3 bugexs_feed.py -t weekvote -o feeds/weekvote.json
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./feeds
-          publish_branch: gh-pages
+      - name: Push to gh-pages
+        run: |
+          cd feeds
+          git init
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add .
+          git commit -m "Update feeds $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
