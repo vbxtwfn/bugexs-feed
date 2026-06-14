@@ -4,7 +4,7 @@
   "home_page_url": "https://m.bugexs.com",
   "feed_url": "https://m.bugexs.com/feed/dayvisit.json",
   "description": "好看的小说推荐，免费在线阅读",
-  "generated_at": "2026-06-15T03:39:24.387809",
+  "generated_at": "2026-06-15T04:40:08.932238",
   "feed_type": "dayvisit",
   "feed_name": "日点击榜",
   "page": 1,
@@ -93,39 +93,75 @@
       "source": "bugexs"
     },
     {
-      "title": "海贼之点化万物",
-      "author": "凶残小子",
-      "category": "综合其他",
-      "url": "https://m.bugexs.com/article/4455.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/11/11s.webp",
-      "intro": "",
-      "source": "bugexs"
-    },
-    {
-      "title": "特种兵：开局干掉眼镜蛇小队",
-      "author": "历史军事",
-      "category": "架空历史",
-      "url": "https://m.bugexs.com/article/4460.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/16/16s.webp",
-      "intro": "一次意外，让林枫穿越到了《我是特种兵》电视剧中，可是这里的环境，他并不熟悉，只知道系统给他的第一个任务是搞定一个特战小队。 直到他完成了任务，见到了他们的大队长雷克明，林枫彻底惊呆了！",
-      "source": "bugexs"
-    },
-    {
-      "title": "禁地签到三十年，我无敌了",
-      "author": "姓陈的大伯",
+      "title": "万道至尊武神",
+      "author": "一杯三两三",
       "category": "穿越重生",
-      "url": "https://m.bugexs.com/article/4461.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/17/17s.webp",
-      "intro": "大苍国的禁地号称“阴死之地”，进去的人十死无生。",
+      "url": "https://m.bugexs.com/article/4448.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/4/4s.webp",
+      "intro": "万里莽林向南，浩渺无垠的天荒大陆。",
       "source": "bugexs"
     },
     {
-      "title": "妖怪请安分",
-      "author": "郭序庭",
-      "category": "游戏竞技",
-      "url": "https://m.bugexs.com/article/4464.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/20/20s.webp",
-      "intro": "我叫苏长卿。是妖庭皇室二皇子，现在在人间，职业是一个短视频博主，每日沉迷于各种都市娱乐不可自拔。 我的父皇一直在逼我回去继承皇位，呵呵，人间这么好玩，你让我回去继承皇位，简直可孝！",
+      "title": "贫僧不想当影帝",
+      "author": "陶安逸",
+      "category": "浪漫青春",
+      "url": "https://m.bugexs.com/article/4450.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/6/6s.webp",
+      "intro": "【一句话简介】这是一个少年武僧被孪生兄弟坑进演艺圈、结果一不小心成了影帝的故事。",
+      "source": "bugexs"
+    },
+    {
+      "title": "1991从芯开始",
+      "author": "三分糊涂",
+      "category": "浪漫青春",
+      "url": "https://m.bugexs.com/article/4453.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/9/9s.webp",
+      "intro": "身为海芯首席架构师的苏远山重生回1991年。在这个AMD还靠山寨Intel存活的年代。他从EDA开始布局，在瓦森纳协定之前抢占先机。为国内的半导体行业重造一片蓝天。",
+      "source": "bugexs"
+    },
+    {
+      "title": "末世猎人",
+      "author": "寒潇瑟瑟雨斜斜",
+      "category": "科幻空间",
+      "url": "https://m.bugexs.com/article/4458.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/14/14s.webp",
+      "intro": "重新回到末日前夕的废墟猎人李乐，这次做好了全面的准备。当别人还在和低级食脑者玩躲猫猫的时候，他已经开着车撞死了一具半神之尸。 当大家还在为一点武器物资拼命的时候，他已经用上了被寄魂强化过",
+      "source": "bugexs"
+    },
+    {
+      "title": "男人三十，身不由己",
+      "author": "帝元啊",
+      "category": "架空历史",
+      "url": "https://m.bugexs.com/article/4463.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/19/19s.webp",
+      "intro": "因为缺钱，戴浩明的父亲即将被医院轰出去，他妻子也想离婚嫁给大老板。",
+      "source": "bugexs"
+    },
+    {
+      "title": "我相公实在太低调了",
+      "author": "聪飞",
+      "category": "仙侠奇缘",
+      "url": "https://m.bugexs.com/article/4465.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/21/21s.webp",
+      "intro": "大秦初立，妖鬼横行。青州洛阳郡内，走出了一位低调的少年，他真的不想搞事情，但奈何总有不开眼的人惹上门来。",
+      "source": "bugexs"
+    },
+    {
+      "title": "时空游侠：平行世界大乱斗",
+      "author": "武侠仙侠",
+      "category": "仙侠奇缘",
+      "url": "https://m.bugexs.com/article/4466.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/22/22s.webp",
+      "intro": "【时空游侠流开山之作】 有没有搞错？ 我只是个混吃等死的躺平青年，居然让我跟无数个平行世界中的“自己”玩大逃杀？ 等等，凭什么别人的金手指一个比一个牛X哄哄，我的金手指只是一",
+      "source": "bugexs"
+    },
+    {
+      "title": "替嫁娇妻掉马日常",
+      "author": "梨花糖",
+      "category": "浪漫青春",
+      "url": "https://m.bugexs.com/article/4467.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/23/23s.webp",
+      "intro": "一场阴谋，顾望舒被迫代替亲姐嫁人，收获极品亲生父母和一个便宜老公。 毫无人脉的她为了洗刷养父的冤屈，只能谨小慎微的活着，努力扮演小可怜，假意顺从，麻痹那对极品父母。 只是这演戏路上",
       "source": "bugexs"
     },
     {
@@ -135,6 +171,15 @@
       "url": "https://m.bugexs.com/article/4470.html",
       "cover": "https://www.bugexs.com/files/article/image/0/26/26s.webp",
       "intro": "现代宋影魂穿到古代，成了梁山村的宋影。面对着亲人的算计，生活的窘迫，宋影和老爹相依为命，利用玄门的一些本事脱离火坑，种植药材发家致富。",
+      "source": "bugexs"
+    },
+    {
+      "title": "致命游戏群",
+      "author": "我想抱着风",
+      "category": "综合其他",
+      "url": "https://m.bugexs.com/article/4471.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/27/27s.webp",
+      "intro": "下载客户端，查看完整作品简介。",
       "source": "bugexs"
     },
     {
@@ -156,24 +201,6 @@
       "source": "bugexs"
     },
     {
-      "title": "九叔之茅山真传",
-      "author": "五穷",
-      "category": "悬疑推理",
-      "url": "https://m.bugexs.com/article/4475.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/31/31s.webp",
-      "intro": "林峰:“师傅，咱茅山是不是很厉害啊？”九叔:“那当然咯，咱们茅山不光上面有人，下面也有人。”林峰:“这么说，我这茅山真传的面子很大咯？”九叔:“哼哼，那是，进了阴曹地府，你问问，谁敢不给咱们茅",
-      "source": "bugexs"
-    },
-    {
-      "title": "玄狐大人我来养",
-      "author": "螺子螺子黛",
-      "category": "浪漫青春",
-      "url": "https://m.bugexs.com/article/4476.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/32/32s.webp",
-      "intro": "堂堂玄狐大人，被一个雷劈到异世界，悲催地附身在一个臭名昭著的小姐身上，姐妹的毒害，未婚夫的绝情，术士的追杀......没关系，看我力挽狂澜，收割美男，人生从此翻盘！",
-      "source": "bugexs"
-    },
-    {
       "title": "战医圣婿",
       "author": "骑猪南下",
       "category": "综合其他",
@@ -183,21 +210,21 @@
       "source": "bugexs"
     },
     {
-      "title": "穿成暴君心上的小甜包",
-      "author": "落叶成孤",
-      "category": "综合其他",
-      "url": "https://m.bugexs.com/article/4480.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/36/36s.webp",
-      "intro": "这是一部充满奇异大胆想象的科幻改运小说，500年后，地球生态完全被改变，为了帮助人类复国，一批低等的保姆机器人寻找到人类的种子，在外星人X的帮助下一起实现地球回造的计划。",
+      "title": "天光 [娱乐圈]",
+      "author": "一树春",
+      "category": "架空历史",
+      "url": "https://m.bugexs.com/article/4482.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/38/38s.webp",
+      "intro": "【冷艳不羁摄影师x绝美天仙编剧】【天才x鬼才】在拿了环球摄影最佳新人奖后，姜原成了万众瞩目的摄影界新星。有传言说，她赚得盆满钵满，身边美女如云，更有知名导演三顾茅庐，只求她参与影片拍摄。但艺术",
       "source": "bugexs"
     },
     {
-      "title": "听说摄政王有个秘密",
-      "author": "月澜觞",
-      "category": "综合其他",
-      "url": "https://m.bugexs.com/article/4481.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/37/37s.webp",
-      "intro": "听说摄政王有个秘密?甲:听说摄政王暗恋大长公主很多年!乙:听说摄政王其实是个断袖～丙:听说摄政王喜欢谁家的小娘子! 丁:听说摄政王喜欢的小娘子已经嫁人。在大魏那位高权重的摄政王因着他的正",
+      "title": "我真的不是宝可梦啊",
+      "author": "我不更新",
+      "category": "架空历史",
+      "url": "https://m.bugexs.com/article/4483.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/39/39s.webp",
+      "intro": "我叫陈欧，我现在非得一批，啊不对，是慌得一批，大木博士把我拖到了解剖台上，说一定要仔细的了解一下我。",
       "source": "bugexs"
     },
     {
@@ -210,24 +237,6 @@
       "source": "bugexs"
     },
     {
-      "title": "末世异形主宰",
-      "author": "龙青衫",
-      "category": "综合其他",
-      "url": "https://m.bugexs.com/article/4485.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/41/41s.webp",
-      "intro": "末世来临，野外化成丛林，城市变成废墟，社会秩序彻底崩溃。 变异进化的狂暴生物，颠覆人类认知的嗜血虫子，改造基因病毒感染的生化怪物，空间异常紊乱导致的虫洞异族威胁…… 人类在这血",
-      "source": "bugexs"
-    },
-    {
-      "title": "云家小九超皮哒",
-      "author": "水清竹",
-      "category": "综合其他",
-      "url": "https://m.bugexs.com/article/4487.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/43/43s.webp",
-      "intro": "她是王牌特工，却穿越成邺城第一废柴奇葩女！本小姐是丑女？化茧成蝶，亮瞎你的钛金势利眼！本小姐是废柴？天雷在手！劈的你外焦里嫩香喷喷！一张利嘴走天下，誓要桃花遍地开！某尊左手拿刀，右手拿剑，砍落",
-      "source": "bugexs"
-    },
-    {
       "title": "错嫁成孕：顾少，宠妻请节制",
       "author": "宁可枝",
       "category": "浪漫青春",
@@ -237,12 +246,39 @@
       "source": "bugexs"
     },
     {
-      "title": "混在影视世界除魔",
-      "author": "问心万古",
-      "category": "科幻空间",
-      "url": "https://m.bugexs.com/article/4494.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/50/50s.webp",
-      "intro": "“别再玩假传奇了，这款传奇一上线就送VIP大礼包，没有任何充值窗口，达叔在线回收元宝……”胡青玩达叔推荐的真传奇触电穿越了到了西方世界，而且，很快他就发现了这个世界不对劲。他在福克斯小镇遇到一",
+      "title": "家有萌妻：闪婚神秘老公",
+      "author": "呆萌的欧尼酱",
+      "category": "浪漫青春",
+      "url": "https://m.bugexs.com/article/4490.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/46/46s.webp",
+      "intro": "宁笙被父母逼迫嫁给将死之人冲喜，绝望之际闪婚私以为是夜店牛郎的男人。",
+      "source": "bugexs"
+    },
+    {
+      "title": "伏天氏",
+      "author": "净无痕",
+      "category": "穿越重生",
+      "url": "https://m.bugexs.com/article/4491.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/47/47s.webp",
+      "intro": "东方神州，有人皇立道统，有圣贤宗门传道，有诸侯雄踞一方王国，诸强林立，神州动乱千万载，执此之时，一代天骄叶青帝及东凰大帝横空出世，斩人皇，驭圣贤，诸侯臣服，东方神州一统！ 然，叶青帝忽然",
+      "source": "bugexs"
+    },
+    {
+      "title": "棋圣的工作",
+      "author": "娜尔爱多",
+      "category": "架空历史",
+      "url": "https://m.bugexs.com/article/4492.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/48/48s.webp",
+      "intro": "我明明是清华毕业生，怎么面对上世纪八十年日本的高中数学题束手无策呢？我明明是个斗地主冠军，怎么这个世界就没有比赛给我打？咦——这群人下围棋怎么带特效的？咦——原来我在下围棋方面有金手指？不管，",
+      "source": "bugexs"
+    },
+    {
+      "title": "诸天世界唯一玩家",
+      "author": "永恒的恒星",
+      "category": "架空历史",
+      "url": "https://m.bugexs.com/article/4493.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/49/49s.webp",
+      "intro": "玄不更非，氪不改命。",
       "source": "bugexs"
     },
     {
@@ -282,12 +318,12 @@
       "source": "bugexs"
     },
     {
-      "title": "心魔种道",
-      "author": "废纸桥",
-      "category": "仙侠奇缘",
-      "url": "https://m.bugexs.com/article/4505.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/61/61s.webp",
-      "intro": "诸位同道，诸位大师、道长、师太、仙子、魔尊、教主们，欢迎来到我的世界，享受穿梭诸界带来的至高愉悦与无上享受（滑稽笑）。 （书友群V群：【杰奇文学网 www.test.com】，普通群【杰",
+      "title": "我带七个女神乘风破浪",
+      "author": "火烧云",
+      "category": "架空历史",
+      "url": "https://m.bugexs.com/article/4511.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/67/67s.webp",
+      "intro": "大姐程玥，冷艳总裁...",
       "source": "bugexs"
     },
     {
@@ -345,6 +381,24 @@
       "source": "bugexs"
     },
     {
+      "title": "宠兽之主",
+      "author": "黑椒仙人",
+      "category": "悬疑推理",
+      "url": "https://m.bugexs.com/article/4522.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/78/78s.webp",
+      "intro": "【宠物】【御兽】【召唤】【契约】【进化】【变异】",
+      "source": "bugexs"
+    },
+    {
+      "title": "纵横宋末",
+      "author": "宋魂",
+      "category": "综合其他",
+      "url": "https://m.bugexs.com/article/4525.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/81/81s.webp",
+      "intro": "胡人疯狂纵马南下，朝廷又不停自毁长城，即将崩溃的大宋经济。一个私生弃子为了证明自己，兴办作坊，文斗奸臣，武抗胡人。 然而没有料到爹爹竟然如此对待他......QQ群：【杰奇文学网 www",
+      "source": "bugexs"
+    },
+    {
       "title": "把恋爱副本玩成求生游戏是否哪里不对",
       "author": "阿噗噜",
       "category": "架空历史",
@@ -381,6 +435,15 @@
       "source": "bugexs"
     },
     {
+      "title": "我家老板非人哉",
+      "author": "拥有福气",
+      "category": "架空历史",
+      "url": "https://m.bugexs.com/article/4533.html",
+      "cover": "https://www.bugexs.com/files/article/image/0/89/89s.webp",
+      "intro": "我叫杜归，今年二十六岁，经营着一家饭店。",
+      "source": "bugexs"
+    },
+    {
       "title": "我的武功太神奇，能自动修炼",
       "author": "神见",
       "category": "穿越重生",
@@ -396,69 +459,6 @@
       "url": "https://m.bugexs.com/article/4536.html",
       "cover": "https://www.bugexs.com/files/article/image/0/92/92s.webp",
       "intro": "李清在天乙大陆龙仁国被誉为“千古第一才女”。 借助李清照的诗词成为龙仁国婉约派代表人物。但她一点都不婉约。 “李清，你能矜持一点吗？” “不能！我赌博、喝酒、深夜不归，但我是",
-      "source": "bugexs"
-    },
-    {
-      "title": "全球降临开局获得贤者之眼",
-      "author": "墨风笛",
-      "category": "科幻空间",
-      "url": "https://m.bugexs.com/article/4538.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/94/94s.webp",
-      "intro": "全球末日降临，全员穿越废土世界 开局一块小坟地，生存全靠打怪升级！ 别人都是真实求生，王路却是天胡开局！ 贤者之眼！ 双倍奖励！ 幸运大转盘！ 当其他人都在",
-      "source": "bugexs"
-    },
-    {
-      "title": "大唐：陛下，您就低头认错吧",
-      "author": "李十三章",
-      "category": "综合其他",
-      "url": "https://m.bugexs.com/article/4543.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/99/99s.webp",
-      "intro": "公元626年8月，突厥颉利可汗率领二十万大军南下！ 穿越到大唐时期，成为了李渊第八子李元亨，系统颁发的第一个任务：阻止渭水之耻。 奖励十万蒙家军！ 大闹渭水之盟，阻止割地的李",
-      "source": "bugexs"
-    },
-    {
-      "title": "吴良广告商",
-      "author": "幽幽tp路",
-      "category": "浪漫青春",
-      "url": "https://m.bugexs.com/article/4544.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/100/100s.webp",
-      "intro": "垃圾，垃圾，还是垃圾！",
-      "source": "bugexs"
-    },
-    {
-      "title": "鉴宝狂少",
-      "author": "乱了方寸",
-      "category": "架空历史",
-      "url": "https://m.bugexs.com/article/4547.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/103/103s.webp",
-      "intro": "丈母娘诬陷，妻子背叛，接二连三的屈辱之后，叶凡终于觉醒了传承。",
-      "source": "bugexs"
-    },
-    {
-      "title": "暗笑风起时",
-      "author": "欲小生",
-      "category": "穿越重生",
-      "url": "https://m.bugexs.com/article/4548.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/104/104s.webp",
-      "intro": "一杯血，一本书，两世情。",
-      "source": "bugexs"
-    },
-    {
-      "title": "元尊",
-      "author": "天蚕土豆",
-      "category": "穿越重生",
-      "url": "https://m.bugexs.com/article/4551.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/107/107s.webp",
-      "intro": "吾有一口玄黄气，可吞天地日月星。天蚕土豆最新鼎力大作，2017年度必看玄幻小说。",
-      "source": "bugexs"
-    },
-    {
-      "title": "山海灵域群兽争霸",
-      "author": "烟中老鬼",
-      "category": "穿越重生",
-      "url": "https://m.bugexs.com/article/4553.html",
-      "cover": "https://www.bugexs.com/files/article/image/0/109/109s.webp",
-      "intro": "神使降临，阴阳归位。山海灵域，群雄争霸。混沌重启，万物皆灭。六神归一，万物新生。 一则古老的预言让这个被锁住的世界一直生活在恐惧中。穿越而来的王炳在这个陌生的世界中是那样的格格不入，在这",
       "source": "bugexs"
     }
   ]
