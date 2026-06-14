@@ -1,28 +1,46 @@
-{
-  "bookSourceComment": "不格小说网",
-  "bookSourceGroup": "小说",
-  "bookSourceName": "不格小说网",
-  "bookSourceType": 0,
-  "bookSourceUrl": "https://m.bugexs.com",
-  "customOrder": 0,
-  "enabled": true,
-  "header": {},
-  "lastUpdateTime": 1781462935380,
-  "respondTime": 18000,
-  "ruleBookInfo": {
-    "author": "$.author",
-    "coverUrl": "$.cover",
-    "name": "$.title",
-    "tocUrl": "$.url"
-  },
-  "ruleContent": {},
-  "ruleSearch": {
-    "author": "$.author",
-    "bookList": "@",
-    "bookUrl": "$.url",
-    "coverUrl": "$.cover",
-    "name": "$.title"
-  },
-  "ruleToc": {},
-  "searchUrl": "https://vbxtwfn.github.io/bugexs-feed/search.json?ts=1781462935"
-}
+[
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "26-4",
+    "bookSourceName": "不格小说#书源.com",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.bugexs.com",
+    "bookUrlPattern": "https?://m\\.bugexs\\.com/article/\\d+\\.html",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "header": "{\"referer\": \"https://m.bugexs.com/\", \"x-requested-with\": \"mark.via\", \"accept-language\": \"zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7\", \"user-agent\": \"Mozilla/5.0 (Linux; Android 10; PACM00 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.79 Mobile Safari/537.36\"}",
+    "lastUpdateTime": 1781463039433,
+    "respondTime": 18000,
+    "ruleBookInfo": {
+      "author": "class.info@span.0@a@text",
+      "coverUrl": "class.base clearfix@dt@img@src",
+      "intro": "class.intro clearfix@text",
+      "kind": "class.info@span.1@a@text",
+      "lastChapter": "class.info@span.4@a@text",
+      "name": "class.base clearfix@dd@h2@text||class.header@h1@text",
+      "tocUrl": "<js>\nurl = baseUrl.replace(/\\.html/,'');\njava.log(url);\n</js>"
+    },
+    "ruleContent": {
+      "content": "class.content@p!-1@html"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "class.info@span.0@text",
+      "bookList": "class.clearfix@li",
+      "bookUrl": "class.tit@href",
+      "coverUrl": "class.pic lazy@img@data-original",
+      "intro": "class.intro@text",
+      "kind": "class.type@text",
+      "name": "class.tit@text||class.header@h1@text"
+    },
+    "ruleToc": {
+      "chapterList": "class.list@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/s.php?s={{key}}&page={{page}}",
+    "weight": 0
+  }
+]
